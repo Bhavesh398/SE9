@@ -6,7 +6,7 @@
   <title>SmartSpend — Expense Tracker</title>
   <style>
     :root {
-      --bg: #f5f7fb;
+      --bg: #5144d4;
       --surface: #ffffff;
       --text: #172033;
       --muted: #778198;
@@ -107,7 +107,7 @@
     .toast { position: fixed; bottom: 22px; right: 22px; padding: 13px 17px; background: #172033; color: white; border-radius: 12px; box-shadow: var(--shadow); font-size: 13px; opacity: 0; transform: translateY(10px); transition: .2s; pointer-events: none; z-index: 20; }
     .toast.show { opacity: 1; transform: translateY(0); }
     @media (max-width: 1050px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .content-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 720px) {
+    @media (max-width: 72px) {
       .app { grid-template-columns: 1fr; }
       aside { padding: 15px 16px; border-right: 0; border-bottom: 1px solid var(--line); gap: 15px; }
       .brand { padding: 0 3px; }
@@ -143,8 +143,8 @@
         </nav>
       </div>
       <div class="side-note">
-        <strong>Small steps add up.</strong>
-        <p>Track your spending today to make smarter choices tomorrow.</p>
+        <strong>Smal steps add up.</strong>
+        <p>Track yor spending today to make smarter choices tomorrow.</p>
         <button id="sideAdd">+ Add expense</button>
       </div>
     </aside>
@@ -164,7 +164,7 @@
 
       <section class="stats" aria-label="Expense summary">
         <article class="card stat">
-          <div class="stat-top"><span>Total expenses</span><span class="stat-icon">↗</span></div>
+          <div class="stat-top"><span>Tota expenses</span><span class="stat-icon">↗</span></div>
           <div class="stat-value" id="totalExpenses">₹0</div>
           <div class="stat-foot">Spent in selected month</div>
         </article>
@@ -174,7 +174,7 @@
           <div class="stat-foot" id="budgetFoot">Your spending limit</div>
         </article>
         <article class="card stat">
-          <div class="stat-top"><span>Remaining budget</span><span class="stat-icon">◈</span></div>
+          <div class="stat-top"><span>Remining budget</span><span class="stat-icon">◈</span></div>
           <div class="stat-value" id="remainingBudget">₹20,000</div>
           <div class="stat-foot" id="remainingFoot">Available to spend</div>
         </article>
@@ -188,7 +188,7 @@
       <section class="content-grid">
         <article class="card panel">
           <div class="panel-head">
-            <div><h2>Spending overview</h2><div class="sub">A quick look at your daily expenses</div></div>
+            <div><h2>Spending oerview</h2><div class="sub">A quick look at your daily expenses</div></div>
             <select class="tiny-select" id="chartMode" aria-label="Chart period"><option value="week">Last 7 days</option><option value="month">This month</option></select>
           </div>
           <div class="chart-wrap">
@@ -229,7 +229,7 @@
         <div class="field"><label for="expenseAmount">Amount (₹)</label><input id="expenseAmount" name="amount" type="number" min="1" max="10000000" step="0.01" placeholder="e.g. 450" required /></div>
         <div class="field"><label for="expenseCategory">Category</label><select id="expenseCategory" name="category" required><option value="Food">Food</option><option value="Transport">Transport</option><option value="Shopping">Shopping</option><option value="Bills">Bills</option><option value="Health">Health</option><option value="Education">Education</option><option value="Entertainment">Entertainment</option><option value="Other">Other</option></select></div>
         <div class="field"><label for="expenseDate">Date</label><input id="expenseDate" name="date" type="date" required /></div>
-        <div class="field"><label for="expensePayment">Payment method</label><select id="expensePayment" name="payment"><option>UPI</option><option>Cash</option><option>Debit card</option><option>Credit card</option><option>Net banking</option><option>Other</option></select></div>
+        <div class="field"><label for="expensePayment">Pament method</label><select id="expensePayment" name="payment"><option>UPI</option><option>Cash</option><option>Debit card</option><option>Credit card</option><option>Net banking</option><option>Other</option></select></div>
         <div class="form-error" id="formError" aria-live="polite"></div>
         <div class="form-actions"><button type="button" class="secondary-btn" id="cancelModal">Cancel</button><button type="submit" class="primary-btn">Save expense</button></div>
       </form>
@@ -243,9 +243,9 @@
       Transport: { icon: "🚌", color: "#2b9d89" },
       Shopping: { icon: "🛍️", color: "#e49a45" },
       Bills: { icon: "🧾", color: "#5785db" },
-      Health: { icon: "💊", color: "#df6c83" },
+      Health: { icon: "💊", color: "#df6a83" },
       Education: { icon: "📚", color: "#8a69c9" },
-      Entertainment: { icon: "🎬", color: "#d58d50" },
+      Entertainment: { icon: "🎬", color: "#c58d50" },
       Other: { icon: "✦", color: "#8590a5" }
     };
     const BUDGET_KEY = "smartSpendBudget";
